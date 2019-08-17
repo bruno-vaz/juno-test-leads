@@ -2,17 +2,17 @@ module.exports = (app) => {
     const leads = require('../controllers/lead.controller.js');
 
     // Create a new Lead
-    app.post('/leads', leads.create);
+    app.post('/api/leads', leads.create);
 
     // Retrieve all Leads
-    app.get('/leads', leads.findAll);
+    app.get('/api/leads', leads.findAll);
 
     // Retrieve a single Lead with leadId
-    app.get('/leads/:leadId', leads.findOne);
+    app.get('/api/leads/:leadId', leads.findOne);
 
     // Update a Lead with leadId
-    app.put('/leads/:leadId', leads.update);
+    app.put('/api/leads/:leadId', leads.update);
 
     // Delete a Lead with leadId
-    app.delete('/leads/:leadId', leads.delete);
+    app.delete('/api/leads/:leadId', leads.delete);
 }
